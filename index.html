@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theme Chnager</title>
+    <style>
+        *{margin: 0px;
+        padding: 0px;}
+
+        body{
+            background-color: antiquewhite;
+            
+        }
+        .container{
+            width: 40%;
+            height: 300px;
+           margin-left: 28%;
+           margin-top: 5%;
+            background-color: rgb(18, 215, 61);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 10px 10px 8px 2px saddlebrown;
+            border-radius: 20px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+          
+        }
+        .heading{
+            /* top: -5%; */
+            /* background-color: red; */
+            color: red;
+
+        }
+        .box{
+            display: flex;
+            flex-direction: row;
+            margin-top: 10px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+        }
+        .box1,.box2,.box3,.box4{
+            margin: 20px;
+            padding: 28px;
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 2px 4px 3px ;
+            cursor: pointer;
+            font-weight: 1000;
+        }
+        .box1{
+            background-color: orange;
+        }
+        .box2{
+            background-color: rgb(85, 15, 145);
+        }
+        .box3{
+            background-color: rgb(5, 203, 12);
+        }
+        .box4{
+            background-color: rgb(186, 14, 66);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Change Theme Color: </h1>
+        <div class="box">
+           <div class="boxes box1" id="yellow">1</div>
+           <div class="boxes box2" id="purple">2</div>
+           <div class="boxes box3" id="green">3</div>
+           <div class="boxes box4" id="pink">4</div>
+        </div>
+    </div>
+
+<script>
+    const body = document.body;
+    const buttons = document.querySelectorAll(".boxes");
+
+    buttons.forEach(function(btn){
+        btn.addEventListener('click',function(e){
+                   
+            if(e.target.id==='yellow')
+            body.style.backgroundColor=e.target.id;
+            if(e.target.id==='purple')
+            body.style.backgroundColor=e.target.id;
+            if(e.target.id==='green')
+            body.style.backgroundColor=e.target.id;
+            if(e.target.id==='pink')
+            body.style.backgroundColor=e.target.id;
+            })
+
+    });
+ 
+</script>
+
+</body>
+</html>
